@@ -1,0 +1,19 @@
+Delete all auto-display expressions? (y or n) [answered Y; input not from terminal]
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+
+Hardware watchpoint 1: *$TDR
+Function "HAL_GPIO_TogglePin" not defined.
+Make breakpoint pending on future shared library load? (y or [n]) [answered N; input not from terminal]
+
+Program received signal SIGINT, Interrupt.
+0x080010e0 in delay_us (nus=nus@entry=1000) at Core/Src/my_reg_bsp.c:24
+24	    if(tnow!=told)
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+delay_us (nus=nus@entry=1000) at Core/Src/my_reg_bsp.c:29
+29	      if(tcnt>=ticks)break;
+Detaching from program: /home/xujc/STM32CubeIDE/workspace_1.15.0/stm32h750_simple_reg_project/stm32h750_simple_reg_project.elf, Remote target
+Ending remote debugging.
+[Inferior 1 (Remote target) detached]
