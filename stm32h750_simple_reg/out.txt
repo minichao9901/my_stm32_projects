@@ -1,0 +1,155 @@
+Delete all auto-display expressions? (y or n) [answered Y; input not from terminal]
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+
+Hardware watchpoint 1: *$TDR
+Function "HAL_GPIO_TogglePin" not defined.
+Make breakpoint pending on future shared library load? (y or [n]) [answered N; input not from terminal]
+
+Program received signal SIGINT, Interrupt.
+0x08001024 in delay_us (nus=nus@entry=1000) at my_reg_bsp.c:26
+26	    tnow=SysTick->VAL;
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+0x08001024 in delay_us (nus=nus@entry=1000) at my_reg_bsp.c:26
+26	    tnow=SysTick->VAL;
+Num     Type           Disp Enb Address    What
+1       hw watchpoint  keep y              *$TDR
+        silent
+        printf "----------------------------------------------------------------\n"
+        printf "HAL_GPIO_TogglePin\n"
+        printf "----------------------------------------------------------------\n"
+        continue
+#0  0x08001024 in delay_us (nus=nus@entry=1000) at my_reg_bsp.c:26
+#1  0x0800104c in delay_ms (nms=499, nms@entry=500) at my_reg_bsp.c:40
+#2  0x080011e0 in my_led_blink () at my_reg_bsp.c:101
+#3  0x08000fe6 in main () at main.c:31
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+0x08001024 in delay_us (nus=nus@entry=1000) at my_reg_bsp.c:26
+26	    tnow=SysTick->VAL;
+`/home/xujc/STM32CubeIDE/workspace_1.15.0/stm32h750_simple_reg_project_2/test/stm32h750_simple_reg_project_2.elf' has changed; re-reading symbols.
+Loading section .isr_vector, size 0x298 lma 0x8000000
+Loading section .text, size 0x1124 lma 0x8000298
+Loading section .rodata, size 0x74 lma 0x80013bc
+Loading section .init_array, size 0x4 lma 0x8001430
+Loading section .fini_array, size 0x4 lma 0x8001434
+Loading section .data, size 0x68 lma 0x8001438
+Start address 0x08001350, load size 5280
+Transfer rate: 3 KB/sec, 880 bytes/write.
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+delay_us (nus=nus@entry=1000) at my_reg_bsp.c:26
+26	    tnow=SysTick->VAL;
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+delay_us (nus=nus@entry=1000) at my_reg_bsp.c:26
+26	    tnow=SysTick->VAL;
+Breakpoint 2 at 0x8001038: file my_reg_bsp.c, line 38.
+Note: automatically using hardware breakpoints for read-only addresses.
+27	    if(tnow!=told)
+26	    tnow=SysTick->VAL;
+27	    if(tnow!=told)
+26	    tnow=SysTick->VAL;
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+delay_us (nus=nus@entry=1000) at my_reg_bsp.c:26
+26	    tnow=SysTick->VAL;
+`/home/xujc/STM32CubeIDE/workspace_1.15.0/stm32h750_simple_reg_project_2/test/stm32h750_simple_reg_project_2.elf' has changed; re-reading symbols.
+Loading section .isr_vector, size 0x298 lma 0x8000000
+Loading section .text, size 0x10e8 lma 0x8000298
+Loading section .rodata, size 0x74 lma 0x8001380
+Loading section .init_array, size 0x4 lma 0x80013f4
+Loading section .fini_array, size 0x4 lma 0x80013f8
+Loading section .data, size 0x68 lma 0x80013fc
+Start address 0x08001314, load size 5220
+Transfer rate: 3 KB/sec, 870 bytes/write.
+Continuing.
+
+Breakpoint 2, delay_ms (nms=nms@entry=500) at my_reg_bsp.c:42
+42	{
+Continuing.
+
+Breakpoint 2, delay_ms (nms=nms@entry=500) at my_reg_bsp.c:42
+42	{
+Num     Type           Disp Enb Address    What
+1       hw watchpoint  keep y              *$TDR
+        silent
+        printf "----------------------------------------------------------------\n"
+        printf "HAL_GPIO_TogglePin\n"
+        printf "----------------------------------------------------------------\n"
+        continue
+2       breakpoint     keep y   0x08000ffc in delay_ms at my_reg_bsp.c:42
+	breakpoint already hit 2 times
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+0x08000ff6 in delay_us (nus=nus@entry=1000) at my_reg_bsp.c:35
+35	for(int i=400; i>0; i--){
+Breakpoint 3 at 0x8000ffc: file my_reg_bsp.c, line 42.
+Continuing.
+
+Breakpoint 3, delay_ms (nms=nms@entry=500) at my_reg_bsp.c:42
+42	{
+Continuing.
+
+Breakpoint 3, delay_ms (nms=nms@entry=500) at my_reg_bsp.c:42
+42	{
+Continuing.
+
+Breakpoint 3, delay_ms (nms=nms@entry=500) at my_reg_bsp.c:42
+42	{
+Continuing.
+
+Breakpoint 3, delay_ms (nms=nms@entry=500) at my_reg_bsp.c:42
+42	{
+Continuing.
+
+Breakpoint 3, delay_ms (nms=nms@entry=500) at my_reg_bsp.c:42
+42	{
+Continuing.
+
+Breakpoint 3, delay_ms (nms=nms@entry=500) at my_reg_bsp.c:42
+42	{
+Continuing.
+
+Breakpoint 3, delay_ms (nms=nms@entry=500) at my_reg_bsp.c:42
+42	{
+Continuing.
+
+Breakpoint 3, delay_ms (nms=nms@entry=500) at my_reg_bsp.c:42
+42	{
+Continuing.
+
+Breakpoint 3, delay_ms (nms=nms@entry=500) at my_reg_bsp.c:42
+42	{
+`/home/xujc/STM32CubeIDE/workspace_1.15.0/stm32h750_simple_reg_project_2/test/stm32h750_simple_reg_project_2.elf' has changed; re-reading symbols.
+Loading section .isr_vector, size 0x298 lma 0x8000000
+Loading section .text, size 0x10f0 lma 0x8000298
+Loading section .rodata, size 0x74 lma 0x8001388
+Loading section .init_array, size 0x4 lma 0x80013fc
+Loading section .fini_array, size 0x4 lma 0x8001400
+Loading section .data, size 0x68 lma 0x8001404
+Start address 0x0800131c, load size 5228
+Transfer rate: 3 KB/sec, 871 bytes/write.
+Continuing.
+
+Breakpoint 3, delay_ms (nms=nms@entry=500) at my_reg_bsp.c:44
+44	{
+Num     Type           Disp Enb Address    What
+3       breakpoint     keep y   0x08001006 in delay_ms at my_reg_bsp.c:44
+	breakpoint already hit 10 times
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+0x08000ff4 in delay_us (nus=nus@entry=1000) at my_reg_bsp.c:36
+36		for(int i=400; i>0; i--){
+quit
+Detaching from program: /home/xujc/STM32CubeIDE/workspace_1.15.0/stm32h750_simple_reg_project_2/test/stm32h750_simple_reg_project_2.elf, Remote target
+Ending remote debugging.
+[Inferior 1 (Remote target) detached]
