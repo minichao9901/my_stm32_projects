@@ -1,8 +1,8 @@
 openocd_path=/home/xujc/work/openocd_riscv
 GDB=arm-none-eabi-gdb
 ##########################################################
-target=stm32h750_simple_reg_project_2
-target_path=/home/xujc/STM32CubeIDE/workspace_1.15.0/$(target)/test
+target=stm32h750_simple_reg
+target_path=/home/xujc/STM32CubeIDE/workspace_1.15.0/$(target)
 
 #CMD=src/openocd -s tcl -f tcl/interface/stlink.cfg -f tcl/target/stm32h7x.cfg
 CMD=src/openocd -s tcl -f "/home/xujc/work/openocd_riscv/tcl/board/artpi_commands.cfg"
