@@ -1,0 +1,147 @@
+openocd_path=/home/xujc/work/openocd_riscv
+GDB=arm-none-eabi-gdb
+##########################################################
+target=test2
+target_path=/home/xujc/STM32CubeIDE/workspace_1.15.0/$(target)
+
+#CMD=src/openocd -s tcl -f tcl/interface/stlink.cfg -f tcl/target/stm32h7x.cfg
+CMD=src/openocd -s tcl -f "/home/xujc/work/openocd_riscv/tcl/board/artpi_commands.cfg"
+#CMD=src/openocd -s tcl -f "/home/xujc/work/openocd_riscv/tcl/board/L4R5_commands.cfg"
+#CMD=src/openocd -s tcl -f "/home/xujc/work/openocd_riscv/tcl/board/L4R5_commands.cfg"
+
+##########################################################
+define GDB_CONTENTS_HEAD
+
+target remote localhost:3333
+monitor reset halt
+load
+
+set logging file out.txt
+set logging on
+set print pretty on
+delete breakpoints
+undisplay
+
+#monitor mdw 0x08000000 32
+#x/32xw 0x00000000
+
+endef
+export GDB_CONTENTS_HEAD
+
+
+define GDB_CONTENTS
+
+\ndefine func_bp
+	break ltdc.c:449
+	commands
+	  set logging off
+	  set logging file pre.txt
+	  set logging overwrite on
+	  set logging on
+	  p/x *RCC
+	  p/x *MyLTDC
+	  p/x *MyLTDC_Layer1
+		continue
+	end
+	
+	\nbreak ltdc.c:499
+	commands
+	  set logging off
+	  set logging file post.txt
+	  set logging overwrite on
+	  set logging on
+	  p/x *RCC
+	  p/x *MyLTDC
+	  p/x *MyLTDC_Layer1
+		continue
+	end
+end
+
+\ndefine func_wp
+	set $$TDR=0x40004c28
+	watch *$$TDR
+	commands
+	    silent
+	    bt
+	    printf "Watchpoint %d hit: TDR = 0x%x\\n", $$_hit_bpnum, *$$TDR
+	    continue
+	end
+	
+	
+	\nbreak HAL_GPIO_TogglePin
+	commands
+	    silent
+	    printf "----------------------------------------------------------------\\n"
+	    printf "HAL_GPIO_TogglePin\\n"
+	    printf "----------------------------------------------------------------\\n"
+	    continue
+	end
+end
+
+
+func_wp
+continue
+
+endef
+export GDB_CONTENTS
+
+##########################################################
+TARGET=$(target_path)/$(target).elf
+GDB_SCRIPT = gdb.cfg
+gdb_gen:
+	@echo "$$GDB_CONTENTS_HEAD" > ${GDB_SCRIPT}
+	@echo "$$GDB_CONTENTS" >> ${GDB_SCRIPT}
+
+ocd:
+	cd $(openocd_path); \
+	$(CMD) \
+	-c "init" \
+	-c "reset"
+
+fork_ocd:
+	gnome-terminal -- bash -i -c "make ocd; exec bash" &
+	sleep 2
+
+telnet:
+	telnet localhost 4444
+
+gdb: gdb_gen
+	$(GDB) $(TARGET) -x $(GDB_SCRIPT)
+
+do_telnet: fork_ocd telnet
+do_gdb: fork_ocd gdb
+
+#-----------------------------------------
+elf:
+	cd $(target_path)/Debug; \
+	make all
+
+dow:
+	cd $(openocd_path); \
+	$(CMD) \
+	-c "init" \
+	-c "program $(target_path)/Debug/$(target).elf verify reset" \
+	-c "mdw 0x08000000 32"  \
+	-c "mdw 0x20000000 32"  \
+	-c "exit"
+
+work_path= /home/xujc/work/artpi_test
+reg_comp:
+	cd $(openocd_path);\
+	$(CMD) \
+	-f "$(work_path)/comp.cfg"
+	cd $(work_path); \
+	./comp_bits.pl pre.txt post.txt
+
+
+Device=STM32H750XB
+#Device=STM32L4R5ZI 
+
+jlink_server: 
+	JLinkGDBServer -device $(Device) -if SWD -speed 4000 -port 3333 
+
+jlink_swo:
+	JLinkSWOViewer -device $(Device) -if SWD -speed 4000 -port 2332
+
+jlink:
+	JLinkExe -device $(Device) -if SWD -speed 4000

@@ -1,0 +1,370 @@
+ELF 头：
+  Magic：   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  类别:                              ELF32
+  数据:                              2 补码，小端序 (little endian)
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI 版本:                          0
+  类型:                              EXEC (可执行文件)
+  系统架构:                          ARM
+  版本:                              0x1
+  入口点地址：               0x240008c9
+  程序头起点：          52 (bytes into file)
+  Start of section headers:          1642976 (bytes into file)
+  标志：             0x5000400, Version5 EABI, hard-float ABI
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         2
+  Size of section headers:           40 (bytes)
+  Number of section headers:         25
+  Section header string table index: 24
+
+节头：
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .text             PROGBITS        24000004 010004 004692 00  AX  0   0  4
+  [ 2] .init             PROGBITS        24004698 014698 000004 00  AX  0   0  4
+  [ 3] .fini             PROGBITS        2400469c 01469c 000004 00  AX  0   0  4
+  [ 4] .rodata           PROGBITS        240046a0 0146a0 0000a4 00   A  0   0  4
+  [ 5] .init_array       INIT_ARRAY      24004744 014744 000004 04  WA  0   0  4
+  [ 6] .fini_array       FINI_ARRAY      24004748 014748 000004 04  WA  0   0  4
+  [ 7] .data             PROGBITS        2400474c 01474c 00000c 00  WA  0   0  4
+  [ 8] .bss              NOBITS          24004758 014758 0000a8 00  WA  0   0  4
+  [ 9] ._user_heap_stack NOBITS          24004800 014758 002000 00  WA  0   0  1
+  [10] .ARM.attributes   ARM_ATTRIBUTES  00000000 0168c8 00002e 00      0   0  1
+  [11] .storage_info     PROGBITS        24006800 016800 0000c8 00   A  0   0  8
+  [12] .comment          PROGBITS        00000000 0168f6 000033 01  MS  0   0  1
+  [13] .debug_info       PROGBITS        00000000 016929 00d95e 00      0   0  1
+  [14] .debug_abbrev     PROGBITS        00000000 024287 001b78 00      0   0  1
+  [15] .debug_aranges    PROGBITS        00000000 025dff 000990 00      0   0  1
+  [16] .debug_ranges     PROGBITS        00000000 02678f 000898 00      0   0  1
+  [17] .debug_macro      PROGBITS        00000000 027027 001d80 00      0   0  1
+  [18] .debug_line       PROGBITS        00000000 028da7 00933e 00      0   0  1
+  [19] .debug_str        PROGBITS        00000000 0320e5 15b01e 01  MS  0   0  1
+  [20] .debug_frame      PROGBITS        00000000 18d104 002614 00      0   0  4
+  [21] .debug_loc        PROGBITS        00000000 18f718 00022c 00      0   0  1
+  [22] .symtab           SYMTAB          00000000 18f944 001170 10     23 211  4
+  [23] .strtab           STRTAB          00000000 190ab4 000626 00      0   0  1
+  [24] .shstrtab         STRTAB          00000000 1910da 000104 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  D (mbind), y (purecode), p (processor specific)
+
+There are no section groups in this file.
+
+程序头：
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  LOAD           0x010004 0x24000004 0x24000004 0x04754 0x067fc RWE 0x10000
+  LOAD           0x016800 0x24006800 0x24006800 0x000c8 0x000c8 R   0x10000
+
+ Section to Segment mapping:
+  段节...
+   00     .text .init .fini .rodata .init_array .fini_array .data .bss ._user_heap_stack 
+   01     .storage_info 
+
+There is no dynamic section in this file.
+
+该文件中没有重定位信息。
+
+There are no unwind sections in this file.
+
+Symbol table '.symtab' contains 279 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 24000004     0 SECTION LOCAL  DEFAULT    1 .text
+     2: 24004698     0 SECTION LOCAL  DEFAULT    2 .init
+     3: 2400469c     0 SECTION LOCAL  DEFAULT    3 .fini
+     4: 240046a0     0 SECTION LOCAL  DEFAULT    4 .rodata
+     5: 24004744     0 SECTION LOCAL  DEFAULT    5 .init_array
+     6: 24004748     0 SECTION LOCAL  DEFAULT    6 .fini_array
+     7: 2400474c     0 SECTION LOCAL  DEFAULT    7 .data
+     8: 24004758     0 SECTION LOCAL  DEFAULT    8 .bss
+     9: 24004800     0 SECTION LOCAL  DEFAULT    9 ._user_heap_stack
+    10: 00000000     0 SECTION LOCAL  DEFAULT   10 .ARM.attributes
+    11: 24006800     0 SECTION LOCAL  DEFAULT   11 .storage_info
+    12: 00000000     0 SECTION LOCAL  DEFAULT   12 .comment
+    13: 00000000     0 SECTION LOCAL  DEFAULT   13 .debug_info
+    14: 00000000     0 SECTION LOCAL  DEFAULT   14 .debug_abbrev
+    15: 00000000     0 SECTION LOCAL  DEFAULT   15 .debug_aranges
+    16: 00000000     0 SECTION LOCAL  DEFAULT   16 .debug_ranges
+    17: 00000000     0 SECTION LOCAL  DEFAULT   17 .debug_macro
+    18: 00000000     0 SECTION LOCAL  DEFAULT   18 .debug_line
+    19: 00000000     0 SECTION LOCAL  DEFAULT   19 .debug_str
+    20: 00000000     0 SECTION LOCAL  DEFAULT   20 .debug_frame
+    21: 00000000     0 SECTION LOCAL  DEFAULT   21 .debug_loc
+    22: 00000000     0 FILE    LOCAL  DEFAULT  ABS w25q64.c
+    23: 24000004     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    24: 24000005    56 FUNC    LOCAL  DEFAULT    1 CS
+    25: 24000038     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    26: 2400003c     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    27: 240000b0     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    28: 24000100     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    29: 2400015e     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    30: 240001c4     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    31: 240001e0     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    32: 240001fa     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    33: 24000214     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    34: 24000282     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    35: 00000000     0 FILE    LOCAL  DEFAULT  ABS Loader_Src.c
+    36: 240002d2     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    37: 240002d3    24 FUNC    LOCAL  DEFAULT    1 uart_send_ch
+    38: 240002ea     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    39: 240002eb    22 FUNC    LOCAL  DEFAULT    1 user_printf
+    40: 240046a0     0 NOTYPE  LOCAL  DEFAULT    4 $d
+    41: 24000300     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    42: 24000528     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    43: 2400052c     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    44: 2400053c     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    45: 24000540     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    46: 24000578     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    47: 2400057c     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    48: 240005c8     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    49: 240005d0     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    50: 240006bc     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    51: 240006c0     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    52: 240006f0     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    53: 240006f4     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    54: 2400070c     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    55: 2400074c     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    56: 240007c0     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    57: 2400086c     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    58: 2400086d    92 FUNC    LOCAL  DEFAULT    1 w25q64_check
+    59: 240008b4     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    60: 240008c8     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    61: 240008ec     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    62: 00000000     0 FILE    LOCAL  DEFAULT  ABS crtstuff.c
+    63: 240008f0     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    64: 240008f1     0 FUNC    LOCAL  DEFAULT    1 deregister_tm_clones
+    65: 24000900     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    66: 2400090c     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    67: 2400090d     0 FUNC    LOCAL  DEFAULT    1 register_tm_clones
+    68: 24000924     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    69: 24000930     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    70: 24000931     0 FUNC    LOCAL  DEFAULT    1 __do_global_dtors_aux
+    71: 2400094c     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    72: 24004758     1 NOTYPE  LOCAL  DEFAULT    8 completed.1
+    73: 24004748     0 NOTYPE  LOCAL  DEFAULT    6 $d
+    74: 24004748     0 OBJECT  LOCAL  DEFAULT    6 __do_global_dtor[...]
+    75: 24000958     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    76: 24000959     0 FUNC    LOCAL  DEFAULT    1 frame_dummy
+    77: 2400096c     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    78: 2400475c    24 NOTYPE  LOCAL  DEFAULT    8 object.0
+    79: 24004744     0 NOTYPE  LOCAL  DEFAULT    5 $d
+    80: 24004744     0 OBJECT  LOCAL  DEFAULT    5 __frame_dummy_in[...]
+    81: 24004758     0 NOTYPE  LOCAL  DEFAULT    8 $d
+    82: 00000000     0 FILE    LOCAL  DEFAULT  ABS memset.c
+    83: 24000978     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    84: 00000000     0 FILE    LOCAL  DEFAULT  ABS system_stm32h7xx.c
+    85: 2400474c     0 NOTYPE  LOCAL  DEFAULT    7 $d
+    86: 24004750     0 NOTYPE  LOCAL  DEFAULT    7 $d
+    87: 24004734     0 NOTYPE  LOCAL  DEFAULT    4 $d
+    88: 24000a1c     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    89: 24000b00     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    90: 00000000     0 FILE    LOCAL  DEFAULT  ABS stm32h7xx_hal.c
+    91: 24004774     0 NOTYPE  LOCAL  DEFAULT    8 $d
+    92: 24004754     0 NOTYPE  LOCAL  DEFAULT    7 $d
+    93: 24000b2c     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    94: 24000b94     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    95: 24000ba4     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    96: 24000bb4     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    97: 24000bc8     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    98: 24000bcc     0 NOTYPE  LOCAL  DEFAULT    1 $t
+    99: 24000be0     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   100: 00000000     0 FILE    LOCAL  DEFAULT  ABS stm32h7xx_hal_co[...]
+   101: 24000be4     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   102: 24000be5    72 FUNC    LOCAL  DEFAULT    1 __NVIC_SetPriori[...]
+   103: 24000c24     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   104: 24000c2c     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   105: 24000c44     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   106: 24000c6c     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   107: 24000c74     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   108: 24000cac     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   109: 24000cb4     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   110: 24000d30     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   111: 00000000     0 FILE    LOCAL  DEFAULT  ABS stm32h7xx_hal_gpio.c
+   112: 24000d34     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   113: 24000f68     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   114: 24000f9c     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   115: 24001090     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   116: 00000000     0 FILE    LOCAL  DEFAULT  ABS stm32h7xx_hal_pw[...]
+   117: 24001094     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   118: 24001104     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   119: 00000000     0 FILE    LOCAL  DEFAULT  ABS stm32h7xx_hal_rcc.c
+   120: 24001108     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   121: 24001390     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   122: 24001394     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   123: 24001600     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   124: 24001604     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   125: 24001874     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   126: 24001884     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   127: 240019b4     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   128: 240019bc     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   129: 24001bfc     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   130: 24001c04     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   131: 24001d14     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   132: 24001d28     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   133: 24001d44     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   134: 24001da8     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   135: 24001ffc     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   136: 00000000     0 FILE    LOCAL  DEFAULT  ABS stm32h7xx_hal_rc[...]
+   137: 2400201c     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   138: 24003431   356 FUNC    LOCAL  DEFAULT    1 RCCEx_PLL2_Config
+   139: 24003595   356 FUNC    LOCAL  DEFAULT    1 RCCEx_PLL3_Config
+   140: 24002104     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   141: 24002118     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   142: 24002354     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   143: 24002358     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   144: 240025e4     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   145: 240025e8     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   146: 2400277c     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   147: 2400278c     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   148: 2400292c     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   149: 24002938     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   150: 24002974     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   151: 24002a18     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   152: 24002aa4     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   153: 24002abc     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   154: 24002b4c     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   155: 24002b64     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   156: 24002d54     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   157: 24002d58     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   158: 24003094     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   159: 24003098     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   160: 2400342c     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   161: 24003430     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   162: 2400358c     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   163: 24003594     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   164: 240036f0     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   165: 00000000     0 FILE    LOCAL  DEFAULT  ABS stm32h7xx_hal_spi.c
+   166: 240036f8     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   167: 24004133    54 FUNC    LOCAL  DEFAULT    1 SPI_GetPacketSize
+   168: 24003934     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   169: 24003fb5   320 FUNC    LOCAL  DEFAULT    1 SPI_CloseTransfer
+   170: 240040f5    62 FUNC    LOCAL  DEFAULT    1 SPI_WaitOnFlagUn[...]
+   171: 24003940     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   172: 24003bd4     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   173: 24003be4     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   174: 24003fb4     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   175: 240040f0     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   176: 240040f4     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   177: 24004132     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   178: 00000000     0 FILE    LOCAL  DEFAULT  ABS spi.c
+   179: 24004778     0 NOTYPE  LOCAL  DEFAULT    8 $d
+   180: 24004168     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   181: 2400420c     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   182: 24004214     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   183: 2400436c     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   184: 00000000     0 FILE    LOCAL  DEFAULT  ABS stm32f1_init.c
+   185: 24004380     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   186: 24004440     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   187: 24004448     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   188: 24004454     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   189: 2400447c     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   190: 24004480     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   191: 2400448e     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   192: 240045e9   142 FUNC    LOCAL  DEFAULT    1 MPU_Config
+   193: 240044b0     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   194: 240045a4     0 NOTYPE  LOCAL  DEFAULT    1 $d
+   195: 240045ac     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   196: 240045e8     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   197: 24004676     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   198: 24004680     0 NOTYPE  LOCAL  DEFAULT    1 $t
+   199: 00000000     0 FILE    LOCAL  DEFAULT  ABS crti.o
+   200: 24004698     0 NOTYPE  LOCAL  DEFAULT    2 $t
+   201: 2400469c     0 NOTYPE  LOCAL  DEFAULT    3 $t
+   202: 00000000     0 FILE    LOCAL  DEFAULT  ABS Dev_Inf.c
+   203: 24006800     0 NOTYPE  LOCAL  DEFAULT   11 $d
+   204: 00000000     0 FILE    LOCAL  DEFAULT  ABS 
+   205: 2400474c     0 NOTYPE  LOCAL  DEFAULT    6 __fini_array_end
+   206: 24004748     0 NOTYPE  LOCAL  DEFAULT    6 __fini_array_start
+   207: 24004748     0 NOTYPE  LOCAL  DEFAULT    5 __init_array_end
+   208: 24004744     0 NOTYPE  LOCAL  DEFAULT    5 __preinit_array_end
+   209: 24004744     0 NOTYPE  LOCAL  DEFAULT    5 __init_array_start
+   210: 24004744     0 NOTYPE  LOCAL  DEFAULT    5 __preinit_array_start
+   211: 24006800   200 OBJECT  GLOBAL DEFAULT   11 StorageInfo
+   212: 00001000     0 NOTYPE  GLOBAL DEFAULT  ABS _Min_Stack_Size
+   213: 240008c9    40 FUNC    GLOBAL DEFAULT    1 Init
+   214: 24004744     0 NOTYPE  GLOBAL DEFAULT    5 __exidx_end
+   215: 24000101    94 FUNC    GLOBAL DEFAULT    1 W25QXX_Write_buf
+   216: 24001d29   756 FUNC    GLOBAL DEFAULT    1 HAL_RCC_GetSysCl[...]
+   217: 240001fb    26 FUNC    GLOBAL DEFAULT    1 W25QXX_Write_Disable
+   218: 24000ba5    14 FUNC    WEAK   DEFAULT    1 HAL_MspInit
+   219: 240006c1    52 FUNC    GLOBAL DEFAULT    1 Write
+   220: 24000541    60 FUNC    GLOBAL DEFAULT    1 Read
+   221: 24004696     0 NOTYPE  GLOBAL DEFAULT    1 _etext
+   222: 24004758     0 NOTYPE  GLOBAL DEFAULT    8 _sbss
+   223: 24000bcd    24 FUNC    GLOBAL DEFAULT    1 HAL_GetREVID
+   224: 24000d35   864 FUNC    GLOBAL DEFAULT    1 HAL_GPIO_Init
+   225: 2400448f    32 FUNC    GLOBAL DEFAULT    1 Stm32_Clock_Init
+   226: 2400052d    20 FUNC    GLOBAL DEFAULT    1 MassErase
+   227: 24004449    12 FUNC    GLOBAL DEFAULT    1 SPI2_INIT
+   228: 24004758     0 OBJECT  GLOBAL HIDDEN     7 __TMC_END__
+   229: 2400474c     4 OBJECT  GLOBAL DEFAULT    7 SystemCoreClock
+   230: 2400474c     0 NOTYPE  GLOBAL DEFAULT    7 _sdata
+   231: 240044b1   252 FUNC    GLOBAL DEFAULT    1 SystemClock_Config
+   232: 24004774     4 OBJECT  GLOBAL DEFAULT    8 uwTick
+   233: 24004750     4 OBJECT  GLOBAL DEFAULT    7 SystemD2Clock
+   234: 24000c45    48 FUNC    GLOBAL DEFAULT    1 HAL_MPU_Disable
+   235: 24004744     0 NOTYPE  GLOBAL DEFAULT    5 __exidx_start
+   236: 24004734    16 OBJECT  GLOBAL DEFAULT    4 D1CorePrescTable
+   237: 2400003d   116 FUNC    GLOBAL DEFAULT    1 W25QXX_Write_Page
+   238: 240045ad    60 FUNC    GLOBAL DEFAULT    1 PeriphCommonCloc[...]
+   239: 240036f9   584 FUNC    GLOBAL DEFAULT    1 HAL_SPI_Init
+   240: 24004699     0 FUNC    GLOBAL DEFAULT    2 _init
+   241: 240006f5   204 FUNC    GLOBAL DEFAULT    1 num2str
+   242: 240000b1    80 FUNC    GLOBAL DEFAULT    1 W25QXX_Erase_Sector
+   243: 24004215   364 FUNC    GLOBAL DEFAULT    1 HAL_SPI_MspInit
+   244: 24004800     0 NOTYPE  GLOBAL DEFAULT    8 _ebss
+   245: 24004455    44 FUNC    GLOBAL DEFAULT    1 SPI2_ReadWrites
+   246: 24004754     4 OBJECT  GLOBAL DEFAULT    7 uwTickPrio
+   247: 24000b2d   120 FUNC    GLOBAL DEFAULT    1 HAL_Init
+   248: 24004481    14 FUNC    GLOBAL DEFAULT    1 USART1_Init
+   249: 00001000     0 NOTYPE  GLOBAL DEFAULT  ABS _Min_Heap_Size
+   250: 240019bd   876 FUNC    GLOBAL DEFAULT    1 HAL_RCC_ClockConfig
+   251: 24000c2d    22 FUNC    GLOBAL DEFAULT    1 HAL_NVIC_SetPrio[...]
+   252: 24000215   110 FUNC    GLOBAL DEFAULT    1 W25QXX_Read
+   253: 24000bb5    24 FUNC    WEAK   DEFAULT    1 HAL_GetTick
+   254: 24000979   164 FUNC    GLOBAL DEFAULT    1 memset
+   255: 24003941  1650 FUNC    GLOBAL DEFAULT    1 HAL_SPI_Transmit[...]
+   256: 24000301   556 FUNC    GLOBAL DEFAULT    1 CheckSum
+   257: 24000a1d   272 FUNC    GLOBAL DEFAULT    1 SystemInit
+   258: 24000283    80 FUNC    GLOBAL DEFAULT    1 spi_flash_read_ID
+   259: 2400469d     0 FUNC    GLOBAL DEFAULT    3 _fini
+   260: 2400015f   102 FUNC    GLOBAL DEFAULT    1 W25QXX_ReadSR
+   261: 24004681    22 FUNC    GLOBAL DEFAULT    1 HAL_InitTick
+   262: 240001c5    28 FUNC    GLOBAL DEFAULT    1 W25QXX_Wait_Busy
+   263: 24004778   136 OBJECT  GLOBAL DEFAULT    8 hspi1
+   264: 2400fe00     0 NOTYPE  GLOBAL DEFAULT    1 _estack
+   265: 240007c1   170 FUNC    GLOBAL DEFAULT    1 short2str
+   266: 24004758     0 NOTYPE  GLOBAL DEFAULT    7 _edata
+   267: 24004800     0 NOTYPE  GLOBAL DEFAULT    9 _end
+   268: 24000c75    64 FUNC    GLOBAL DEFAULT    1 HAL_MPU_Enable
+   269: 24001109  2228 FUNC    WEAK   DEFAULT    1 HAL_RCC_OscConfig
+   270: 240001e1    26 FUNC    GLOBAL DEFAULT    1 W25QXX_Write_Enable
+   271: 2400201d  5140 FUNC    GLOBAL DEFAULT    1 HAL_RCCEx_Periph[...]
+   272: 24000cb5   128 FUNC    GLOBAL DEFAULT    1 HAL_MPU_ConfigRegion
+   273: 24004381   200 FUNC    GLOBAL DEFAULT    1 gpio_init
+   274: 24004169   172 FUNC    GLOBAL DEFAULT    1 MX_SPI1_Init
+   275: 2400057d    84 FUNC    GLOBAL DEFAULT    1 SectorErase
+   276: 24001095   116 FUNC    GLOBAL DEFAULT    1 HAL_PWREx_Config[...]
+   277: 240005d1   240 FUNC    GLOBAL DEFAULT    1 Verify
+   278: 24004677    10 FUNC    GLOBAL DEFAULT    1 Error_Handler
+
+No version information found in this file.
+Attribute Section: aeabi
+File Attributes
+  Tag_CPU_name: "7E-M"
+  Tag_CPU_arch: v7E-M
+  Tag_CPU_arch_profile: Microcontroller
+  Tag_THUMB_ISA_use: Thumb-2
+  Tag_FP_arch: FPv5/FP-D16 for ARMv8
+  Tag_ABI_PCS_wchar_t: 4
+  Tag_ABI_FP_denormal: Needed
+  Tag_ABI_FP_exceptions: Needed
+  Tag_ABI_FP_number_model: IEEE 754
+  Tag_ABI_align_needed: 8-byte
+  Tag_ABI_enum_size: small
+  Tag_ABI_VFP_args: VFP registers
+  Tag_CPU_unaligned_access: v6

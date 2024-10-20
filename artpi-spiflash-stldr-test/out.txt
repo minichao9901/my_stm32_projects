@@ -1,0 +1,289 @@
+Delete all auto-display expressions? (y or n) [answered Y; input not from terminal]
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+
+warning: Invalid state, unable to determine sp alias, assuming msp.
+Hardware watchpoint 1: *$TDR
+Function "HAL_GPIO_TogglePin" not defined.
+Make breakpoint pending on future shared library load? (y or [n]) [answered N; input not from terminal]
+
+Program received signal SIGINT, Interrupt.
+main () at Core/Src/main.c:43
+43	  while (1)
+Breakpoint 2 at 0x8002fcc: file Flash/Loader_Src.c, line 120.
+Note: automatically using hardware breakpoints for read-only addresses.
+Loading section .isr_vector, size 0x298 lma 0x8000000
+Loading section .text, size 0x2d34 lma 0x8000298
+Loading section used, size 0x88 lma 0x8002fcc
+Loading section .rodata, size 0x10 lma 0x8003054
+Loading section .init_array, size 0x4 lma 0x8003064
+Loading section .fini_array, size 0x4 lma 0x8003068
+Loading section .data, size 0x10 lma 0x800306c
+Start address 0x08002f60, load size 12412
+Transfer rate: 7 KB/sec, 1773 bytes/write.
+Continuing.
+
+Breakpoint 2, Init (configureMemoryMappedMode=configureMemoryMappedMode@entry=0 '\000') at Flash/Loader_Src.c:120
+120	{
+121		__disable_irq();
+123		SystemInit();
+125		if(HAL_Init() != 0)
+130		SystemClock_Config(400);
+132		if(exflash_init() != 0)
+main () at Core/Src/main.c:43
+43	  while (1)
+Breakpoint 3 at 0x8002c28: file Flash/exflash.c, line 188.
+Loading section .isr_vector, size 0x298 lma 0x8000000
+Loading section .text, size 0x2d34 lma 0x8000298
+Loading section used, size 0x88 lma 0x8002fcc
+Loading section .rodata, size 0x10 lma 0x8003054
+Loading section .init_array, size 0x4 lma 0x8003064
+Loading section .fini_array, size 0x4 lma 0x8003068
+Loading section .data, size 0x10 lma 0x800306c
+Start address 0x08002f60, load size 12412
+Transfer rate: 7 KB/sec, 1773 bytes/write.
+Continuing.
+
+Breakpoint 2, Init (configureMemoryMappedMode=configureMemoryMappedMode@entry=0 '\000') at Flash/Loader_Src.c:120
+120	{
+Continuing.
+
+Breakpoint 3, exflash_init () at Flash/exflash.c:188
+188	int exflash_init(void) {
+189	    exFlashType = eW25ERR;
+190	    exFlashLines = SPI_1_LINE;
+193			MX_SPI1_Init();
+194	    exflash_read_id(&id);
+195	    switch (id) {
+$1 = 61207
+$2 = 0xef17
+200	        case 0xEF17: exFlashType = eW25Q128; break;
+main () at Core/Src/main.c:43
+43	  while (1)
+
+Program received signal SIGINT, Interrupt.
+main () at Core/Src/main.c:43
+43	  while (1)
+`/home/xujc/STM32CubeIDE/workspace_1.15.0/test/test.elf' has changed; re-reading symbols.
+Loading section .isr_vector, size 0x298 lma 0x8000000
+Loading section .text, size 0x2d44 lma 0x8000298
+Loading section used, size 0x8c lma 0x8002fdc
+Loading section .rodata, size 0x10 lma 0x8003068
+Loading section .init_array, size 0x4 lma 0x8003078
+Loading section .fini_array, size 0x4 lma 0x800307c
+Loading section .data, size 0x10 lma 0x8003080
+Start address 0x08002f70, load size 12432
+Transfer rate: 7 KB/sec, 1776 bytes/write.
+Continuing.
+
+Breakpoint 2, Init (configureMemoryMappedMode=configureMemoryMappedMode@entry=0 '\000') at Flash/Loader_Src.c:120
+120	{
+Continuing.
+
+Breakpoint 3, exflash_init () at Flash/exflash.c:188
+188	int exflash_init(void) {
+189	    exFlashType = eW25ERR;
+190	    exFlashLines = SPI_1_LINE;
+193			MX_SPI1_Init();
+194	    exflash_read_id(&id);
+195	    switch (id) {
+$3 = 0xef17
+200	        case 0xEF17: exFlashType = eW25Q128; break;
+main () at Core/Src/main.c:29
+29	  Read(0x70000000, 128, aRxBuffer);
+46	  while (1)
+$4 = {0xff <repeats 128 times>}
+Invalid command argument
+address option value ('aRxBuffer') is not valid
+Protocol error with Rcmd
+$5 = {0xff <repeats 128 times>}
+Invalid command argument
+address option value ('&aRxBuffer') is not valid
+Protocol error with Rcmd
+Delete all auto-display expressions? (y or n) [answered Y; input not from terminal]
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+
+warning: Invalid state, unable to determine sp alias, assuming msp.
+Hardware watchpoint 1: *$TDR
+Function "HAL_GPIO_TogglePin" not defined.
+Make breakpoint pending on future shared library load? (y or [n]) [answered N; input not from terminal]
+
+Program received signal SIGINT, Interrupt.
+main () at Core/Src/main.c:28
+28	  while (1)
+Num     Type           Disp Enb Address    What
+1       hw watchpoint  keep y              *$TDR
+        silent
+        printf "----------------------------------------------------------------\n"
+        printf "HAL_GPIO_TogglePin\n"
+        printf "----------------------------------------------------------------\n"
+        continue
+Breakpoint 2 at 0x800299c: file Flash/Loader_Src.c, line 187.
+Note: automatically using hardware breakpoints for read-only addresses.
+Loading section .isr_vector, size 0x298 lma 0x8000000
+Loading section .text, size 0x2be0 lma 0x8000298
+Loading section .rodata, size 0x10 lma 0x8002e78
+Loading section .init_array, size 0x4 lma 0x8002e88
+Loading section .fini_array, size 0x4 lma 0x8002e8c
+Loading section .data, size 0x10 lma 0x8002e90
+Start address 0x08002e0c, load size 11936
+Transfer rate: 7 KB/sec, 1989 bytes/write.
+Continuing.
+
+Breakpoint 2, w25q64_check () at Flash/Loader_Src.c:187
+187	{
+190	  temp=spi_flash_read_ID();
+191	  short2str(temp,buf);
+$1 = 0xef4018
+`/home/xujc/STM32CubeIDE/workspace_1.15.0/test2/test2.elf' has changed; re-reading symbols.
+Loading section .isr_vector, size 0x298 lma 0x8000000
+Loading section .text, size 0x2be0 lma 0x8000298
+Loading section .rodata, size 0x10 lma 0x8002e78
+Loading section .init_array, size 0x4 lma 0x8002e88
+Loading section .fini_array, size 0x4 lma 0x8002e8c
+Loading section .data, size 0x10 lma 0x8002e90
+Start address 0x08002e0c, load size 11936
+Transfer rate: 7 KB/sec, 1989 bytes/write.
+Continuing.
+
+Breakpoint 2, w25q64_check () at Flash/Loader_Src.c:187
+187	{
+190	  temp=spi_flash_read_ID();
+191	  short2str(temp,buf);
+$2 = 0xef4018
+195	  if(temp==0xef4018)
+Init () at Flash/Loader_Src.c:214
+214	  return 1;
+main () at Core/Src/main.c:27
+27	  Read(0x70000000, 128, aRxBuffer);
+28	  while (1)
+$3 = {0xff <repeats 128 times>}
+`/home/xujc/STM32CubeIDE/workspace_1.15.0/test2/test2.elf' has changed; re-reading symbols.
+Loading section .isr_vector, size 0x298 lma 0x8000000
+Loading section .text, size 0x2d00 lma 0x8000298
+Loading section .rodata, size 0x90 lma 0x8002f98
+Loading section .init_array, size 0x4 lma 0x8003028
+Loading section .fini_array, size 0x4 lma 0x800302c
+Loading section .data, size 0x10 lma 0x8003030
+Start address 0x08002f2c, load size 12352
+Transfer rate: 7 KB/sec, 2058 bytes/write.
+Continuing.
+
+Breakpoint 2, w25q64_check () at Flash/Loader_Src.c:187
+187	{
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+main () at Core/Src/main.c:30
+30	  while (1)
+aTxBuffer = "hello world! hello world!\n", '\000' <repeats 101 times>
+aRxBuffer = "hello world! hello world!\n", '\000' <repeats 101 times>
+`/home/xujc/STM32CubeIDE/workspace_1.15.0/test2/test2.elf' has changed; re-reading symbols.
+Loading section .isr_vector, size 0x298 lma 0x8000000
+Loading section .text, size 0x2d14 lma 0x8000298
+Loading section used, size 0x1f0 lma 0x8002fac
+Loading section .rodata, size 0x90 lma 0x800319c
+Loading section .init_array, size 0x4 lma 0x800322c
+Loading section .fini_array, size 0x4 lma 0x8003230
+Loading section .data, size 0x10 lma 0x8003234
+Start address 0x08002f40, load size 12868
+Transfer rate: 7 KB/sec, 1838 bytes/write.
+Continuing.
+
+Breakpoint 2, w25q64_check () at Flash/Loader_Src.c:202
+202	{
+205	  temp=spi_flash_read_ID();
+206	  short2str(temp,buf);
+$4 = 0xef4018
+210	  if(temp==0xef4018)
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+main () at Core/Src/main.c:30
+30	  while (1)
+aTxBuffer = "hello world! hello world!\n", '\000' <repeats 101 times>
+aRxBuffer = "hello world! hello world!\n", '\000' <repeats 101 times>
+$5 = 0x2407fef8
+Invalid command argument
+address option value ('&aRxBuffer') is not valid
+Protocol error with Rcmd
+  STM32H750XBHx.ap2 mdw address [count]
+  STM32H750XBHx.cpu0 mdw address [count]
+  flash mdw address [count]
+mdw ['phys'] address [count]
+Protocol error with Rcmd
+Invalid command argument
+address option value ('aRxBuffer') is not valid
+Protocol error with Rcmd
+0x00000000: 1df1c4b1 d1a049b4 a7051030 84c3a788 39367b59 95035bfb 8e2c4b80 20876b75 
+0x00000020: 799bf2d1 630fe7e5 944f9fe3 b33c51c8 999d2598 ad8a61cd de966022 92c3124d 
+0x00000040: cf6057f4 b39ab685 bc8cedaa 92691251 835ce803 cfa83abe 4e3aa913 2c2c66c1 
+0x00000060: f9d7b5ea f686a003 629c0560 ab21a282 0112c0a9 a26eb713 cd25662b 19209a02 
+0x00000000: 00001234 00001234 00001234 00001234 00001234 00001234 00001234 00001234 
+0x00000020: 00001234 00001234 00001234 00001234 00001234 00001234 00001234 00001234 
+0x00000040: 00001234 00001234 00001234 00001234 00001234 00001234 00001234 00001234 
+0x00000060: 00001234 00001234 00001234 00001234 00001234 00001234 00001234 00001234 
+$6 = 0x2407fef8
+Failed to write memory at 0x240800b8
+Protocol error with Rcmd
+$7 = {0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x20, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x21, 0x20, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x20, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x21, 0xa, 0x0 <repeats 102 times>}
+$8 = "hello world! hello world!\n", '\000' <repeats 101 times>
+0x2407fef8: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0x2407ff18: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0x2407ff38: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+0x2407ff58: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+$9 = 0x2407fef8
+$10 = {0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x20, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x21, 0x20, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x20, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x21, 0xa, 0x0 <repeats 102 times>}
+`/home/xujc/STM32CubeIDE/workspace_1.15.0/test2/test2.elf' has changed; re-reading symbols.
+Loading section .isr_vector, size 0x298 lma 0x8000000
+Loading section .text, size 0x2cec lma 0x8000298
+Loading section used, size 0x1f0 lma 0x8002f84
+Loading section .rodata, size 0x10 lma 0x8003174
+Loading section .init_array, size 0x4 lma 0x8003184
+Loading section .fini_array, size 0x4 lma 0x8003188
+Loading section .data, size 0x90 lma 0x800318c
+Start address 0x08002f18, load size 12828
+Transfer rate: 7 KB/sec, 1832 bytes/write.
+Continuing.
+
+Breakpoint 2, w25q64_check () at Flash/Loader_Src.c:202
+202	{
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+main () at Core/Src/main.c:31
+31	  while (1)
+$11 = "hello world! hello world!\n", '\000' <repeats 101 times>
+$12 = 0x200000ac
+0x200000ac: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+0x200000cc: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+0x200000ec: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+0x2000010c: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+0x2000012c: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+0x2000014c: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+0x2000016c: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+0x2000018c: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+0x200001ac: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+0x200001cc: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+0x200001ec: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+0x2000020c: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+0x2000022c: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+0x2000024c: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+0x2000026c: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+0x2000028c: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+$13 = {0x0 <repeats 128 times>}
+Continuing at 0x800040e.
+
+Breakpoint 2, w25q64_check () at Flash/Loader_Src.c:202
+202	{
+Continuing.
+
+Program received signal SIGINT, Interrupt.
+main () at Core/Src/main.c:31
+31	  while (1)
+$14 = "hello world! hello world!\n", '\000' <repeats 101 times>
+Quit
+quit
+Detaching from program: /home/xujc/STM32CubeIDE/workspace_1.15.0/test2/test2.elf, Remote target
+Remote connection closed
