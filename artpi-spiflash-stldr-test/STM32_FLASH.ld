@@ -46,9 +46,10 @@ SECTIONS
   /* The program code and other data goes into FLASH */
   .text :
   {
-    . = 0x00;
-    KEEP (*w25q64.o(.text))
-    KEEP (*w25q64.o(.text*))
+    . = ALIGN(4);
+    /*. = 0x00;*/
+    /*KEEP (*w25q64.o(.text))*/
+    /*KEEP (*w25q64.o(.text*))*/
     KEEP (*Loader_Src.o(.text))
     KEEP (*Loader_Src.o(.text*))
     *(.text)           /* .text sections (code) */

@@ -105,7 +105,7 @@ int MassErase (void)
 
 int Read (uint32_t Address, uint32_t Size, uint8_t* buffer)
 { 
-	Address -= ADDRESS_OFFSET;
+	//Address -= ADDRESS_OFFSET;
   user_printf("Read\r\n");
   W25QXX_Read(buffer, Address, Size);
   SPI2_ReadWrites(0x00);
@@ -114,8 +114,8 @@ int Read (uint32_t Address, uint32_t Size, uint8_t* buffer)
 
 int SectorErase (uint32_t EraseStartAddress ,uint32_t EraseEndAddress)
 {   
-  EraseStartAddress -= ADDRESS_OFFSET;
-  EraseEndAddress -= ADDRESS_OFFSET;
+  //EraseStartAddress -= ADDRESS_OFFSET;
+  //EraseEndAddress -= ADDRESS_OFFSET;
   user_printf("SectorErase\r\n");   
   EraseStartAddress = EraseStartAddress -  EraseStartAddress%0x1000;
   while (EraseEndAddress>=EraseStartAddress)
@@ -128,7 +128,7 @@ int SectorErase (uint32_t EraseStartAddress ,uint32_t EraseEndAddress)
 
 uint64_t Verify (uint32_t MemoryAddr, uint32_t RAMBufferAddr, uint32_t Size, uint32_t missalignement)
 {
-	MemoryAddr -= ADDRESS_OFFSET;
+	//MemoryAddr -= ADDRESS_OFFSET;
   uint32_t InitVal = 0;
   uint32_t VerifiedData = 0;
   uint8_t TmpBuffer = 0x00;
@@ -152,7 +152,7 @@ uint64_t Verify (uint32_t MemoryAddr, uint32_t RAMBufferAddr, uint32_t Size, uin
 
 int Write (uint32_t Address, uint32_t Size, uint8_t* buffer)
 {
-	Address -= ADDRESS_OFFSET;
+	//Address -= ADDRESS_OFFSET;
   user_printf("Write\r\n");
   W25QXX_Write_buf(buffer, Address, Size);
   return 1;

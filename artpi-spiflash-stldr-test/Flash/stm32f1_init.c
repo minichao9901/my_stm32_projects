@@ -50,8 +50,8 @@ void USART1_Init(void)
 ------------------------------------------------------------*/	
 void Stm32_Clock_Init(void)
 {
-	__disable_irq();
-  MPU_Config();
+	//__disable_irq();
+  //MPU_Config();
 	SystemInit();
   HAL_Init();
   SystemClock_Config();
